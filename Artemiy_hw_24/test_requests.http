@@ -1,0 +1,49 @@
+###
+POST http://127.0.0.1:5000/perform_query
+Content-Type: application/json
+
+{
+   "file_name": "apache_logs.txt",
+   "cmd1": "regex",
+   "value1": "images/\\w+\\.png",
+   "cmd2": "sort",
+   "value2": "asc"
+}
+
+###
+
+POST http://127.0.0.1:5000/perform_query
+Content-Type: application/json
+
+{
+   "file_name": "apache_logs.txt",
+   "cmd1": "limit",
+   "value1": "1",
+   "cmd2": "sort",
+   "value2": "asc"
+}
+
+###
+
+POST http://127.0.0.1:5000/perform_query
+Content-Type: application/json
+
+{
+   "file_name": "apache_logs.txt",
+   "cmd1": 1,
+   "value1": "",
+   "cmd2": "sort",
+   "value2": 2
+}
+
+###
+POST http://127.0.0.1:5000/perform_query
+Content-Type: application/json
+
+{
+   "file_name": "apache_logs.txt",
+   "cmd1": "filter",
+   "value1": "POST",
+   "cmd2": "limit",
+   "value2": "2"
+}
